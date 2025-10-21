@@ -27,7 +27,7 @@ Create a mordern **data warehouse house using SQL server** to consolidate sales 
 
 #### Objectives
 
-Generate an SQL-based analytics that provides detailed insights into:
+Generate an SQL-based analytics that provide detailed insights into:
 
 * **Customer Behaviour**
 * **Product Performance**
