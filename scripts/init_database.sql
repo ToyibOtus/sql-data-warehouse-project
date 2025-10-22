@@ -4,8 +4,8 @@ Create Database and Schemas
 ======================================================================================
 SCRIPT PURPOSE: 
 	This script drops existing database named 'Datewarehouse', and recreates a new database with the same name.
-	If it exists, it is dropped and a new one is recreated, otherwise, the scipt between 'BEGIN' and 'END' is skipped, and the 
-	'data warehouse 'database is created. Addititionally, the script sets up three schemas within the database: 
+	If it exists, it is dropped and a new one is recreated, otherwise, the scipt between 'BEGIN' and 'END' in the 'IF' Statement
+	is skipped, and the 'data warehouse 'database is created. Addititionally, the script sets up three schemas within the database: 
 	'Bronze', 'Silver', and 'Gold'
 
 WARNING:
