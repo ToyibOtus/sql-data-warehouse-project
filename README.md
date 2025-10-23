@@ -11,7 +11,7 @@ This project demonstrates a comprehensive data warehousing and analytics, from b
 
 #### Objective
 
-Create a mordern **data warehouse house using SQL server** to consolidate sales data, enabling analytical reporting and informed decision-making.
+Create a mordern **data warehouse using SQL server** to consolidate sales data, enabling analytical reporting and informed decision-making.
 
 ##### Specifications
 
