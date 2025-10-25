@@ -158,7 +158,7 @@ BEGIN
 				ELSE sls_price
 			END sls_price
 		FROM bronze.crm_sales_details;
-		SET @end_time =GETDATE();
+		SET @end_time = GETDATE();
 		PRINT '>> Load Duration: ' + CAST(DATEDIFF(second, @start_time, @end_time) AS VARCHAR) +'seconds';
 		PRINT '-----------------';
 
