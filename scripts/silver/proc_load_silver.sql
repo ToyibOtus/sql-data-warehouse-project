@@ -208,7 +208,7 @@ BEGIN
 			REPLACE(cid, '-', '') cid,
 			CASE
 				WHEN TRIM(cntry) = 'DE' THEN 'Germany'
-				WHEN TRIM(cntry) IN('USA', 'United States', 'United States') THEN 'United States'
+				WHEN TRIM(cntry) IN('US', 'USA', 'United States') THEN 'United States'
 				WHEN TRIM(cntry) IS NULL OR cntry = '' THEN 'N/A'
 				ELSE TRIM(cntry)
 			END AS cntry
