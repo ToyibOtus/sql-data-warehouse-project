@@ -32,7 +32,7 @@ BEGIN
 		PRINT '-------------------------------------------------------------------------------------';
 
 		-- Loading silver.crm_cust_info
-		SET @start_time =GETDATE();
+		SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: silver.crm_cust_info';
 		TRUNCATE TABLE silver.crm_cust_info;
 
@@ -72,12 +72,12 @@ BEGIN
 			WHERE cst_id IS NOT NULL
 		)SUB
 		WHERE flag_last = 1;
-		SET @end_time =GETDATE();
+		SET @end_time = GETDATE();
 		PRINT '>> Load Duration: ' + CAST(DATEDIFF(second, @start_time, @end_time) AS VARCHAR) +'seconds';
 		PRINT '-----------------';
 
 		-- Loading silver.crm_prd_info
-		SET @start_time =GETDATE();
+		SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: silver.crm_prd_info';
 		TRUNCATE TABLE silver.crm_prd_info;
 
@@ -114,7 +114,7 @@ BEGIN
 		PRINT '-----------------';
 
 		-- Loading silver.crm_sales_details
-		SET @start_time =GETDATE();
+		SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: silver.crm_sales_details';
 		TRUNCATE TABLE silver.crm_sales_details;
 
@@ -167,7 +167,7 @@ BEGIN
 		PRINT '-------------------------------------------------------------------------------------';
 
 		-- Loading silver.erp_cust_az12
-		SET @start_time =GETDATE();
+		SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: silver.erp_cust_az12';
 		TRUNCATE TABLE silver.erp_cust_az12;
 
@@ -198,7 +198,7 @@ BEGIN
 		PRINT '-----------------';
 
 		-- Loading silver.erp_loc_a101
-		SET @start_time =GETDATE();
+		SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: silver.erp_loc_a101';
 		TRUNCATE TABLE silver.erp_loc_a101;
 
@@ -218,7 +218,7 @@ BEGIN
 		PRINT '-----------------';
 		
 		-- Loading silver.erp_px_cat_g1v2
-		SET @start_time =GETDATE();
+		SET @start_time = GETDATE();
 		PRINT '>> Truncating Table: silver.erp_px_cat_g1v2';
 		TRUNCATE TABLE silver.erp_px_cat_g1v2;
 
