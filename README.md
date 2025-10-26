@@ -43,4 +43,4 @@ This project is lincesed under **MIT Lincense**. You are free to use, modify, or
 ---
 
 ## About Me
-Hi there! I'm **Otusanya Toyib Oluwatimilehin**, a **First-Class Gradute of Industrial Chemistry** from Olabisi Onabanjo University. I'm a **Data Engineer and Analyst** passionate about building reliable data pipelines, efficient data models, and generating data-deriven business decisions. 
+Hi there! I'm **Otusanya Toyib Oluwatimilehin**, a **First-Class Gradute of Industrial Chemistry** from Olabisi Onabanjo University. I'm a **Data Engineer and Analyst** passionate about building reliable data pipelines, efficient data models, and generating data-driven business decisions. 
