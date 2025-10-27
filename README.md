@@ -59,6 +59,11 @@ These provide key metrics to support strategic decision-making and business grow
 ## Data Architecture
 The data architecture follows the Medalion Architecture **Bronze**, **Silver**, and **Gold** layers:
 
+![Data Architecture.png](docs/data_architecture.png)
+
+1. **Bronze Layer**: Stores raw data as-is from the source system, enabling traceability and debugging.
+2. **Silver Layer**: Sstores cleaned, prepared, and transformed data. It is designed to support analysis.
+3. **Gold Layer**: Houses buesiness-ready data modeled into a star schema, supporting reporting and analytics.
 
 ---
 
@@ -69,3 +74,6 @@ This project is lincesed under **MIT Lincense**. You are free to use, modify, or
 
 ## About Me
 Hi there! I'm **Otusanya Toyib Oluwatimilehin**, a **First-Class Gradute of Industrial Chemistry** from Olabisi Onabanjo University. I'm a **Data Engineer and Analyst** passionate about building reliable data pipelines, efficient data models, and generating data-driven business decisions. 
+
+<img src="https://cdn-icons-png.flaticon.com/128/724/724664.png" width="18" alt="Phone"/> **07060784176** 
+<img src="https://cdn-icons-png.flaticon.com/128/732/732200.png" width="18" alt="E-mail"/> **toyibotusanya@gmail.com**
