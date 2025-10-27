@@ -13,7 +13,7 @@ This project involves:
 3. **Data Modeling**: Develping fact and dimension tables optimized for analytical queries.
 4. **Analytics & Reporting**: Creating SQL-based reports to support data-driven decisions.
 
-This repository is an excellent resource for professionals, and students looking to expertise in:
+This repository is an excellent resource for professionals, and students looking to showcase expertise in:
 
 * SQL Development
 * Data Architect
