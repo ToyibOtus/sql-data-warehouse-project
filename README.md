@@ -5,6 +5,16 @@ This project demonstrates a comprehensive data warehousing and analytics, from b
 
 ---
 
+## Project Overview
+This project involves:
+
+1. **Data Architecture**: Designing a modern data warehouse using Medalion Architecture **Bronze**, **Silver**, and **Gold** layers.
+2. **ETL Pipelines**: Extraction, transforming, and loading data from source systems into the data warehouse.
+3. **Data Modeling**: Develping fact and dimension tables optimized for analytical queries.
+4. **Analytics & Reporting**: Creating SQL-based reports to support data-driven decisions.
+
+---
+
 ## Project Requirements
 
 ### Build a Data Warehouse (Data Engineering)
@@ -23,9 +33,9 @@ Create a mordern **data warehouse using SQL server** to consolidate sales data, 
 
 ---
 
-### 01: Analytics and Reporting (Data Analytics)
+## 01: Analytics and Reporting (Data Analytics)
 
-#### Objectives
+### Objectives
 
 Generate an SQL-based analytics that provide detailed insights into:
 
@@ -34,6 +44,12 @@ Generate an SQL-based analytics that provide detailed insights into:
 * **Sales Trends**
 
 These provide key metrics to support strategic decision-making and business growth.
+
+---
+
+## Data Architecture
+The data architecture follows the Medalion Architecture **Bronze**, **Silver**, and **Gold** layers:
+
 
 ---
 
