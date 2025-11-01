@@ -1,4 +1,4 @@
-# Data Warehouse and Analytic Project
+# Data Warehouse and Analytics Project
 
 Welcome to the **Data Warehouse and Analytic Project** repository!
 This project demonstrates a comprehensive data warehousing and analytics, from building a data warehouse to generating actionable insights. This portfolio project showcases industry best practices in data engineering and analytics.
@@ -73,7 +73,7 @@ This project is lincesed under **MIT Lincense**. You are free to use, modify, or
 ---
 
 ## About Me
-Hi there! I'm **Otusanya Toyib Oluwatimilehin**, a **First-Class Gradute** of Industrial Chemistry from Olabisi Onabanjo University. I'm a **Data Engineer and Analyst** passionate about building reliable data pipelines, efficient data models, and generating data-driven business decisions. 
+Hi there! I'm **Otusanya Toyib Oluwatimilehin**, a **First-Class Gradute** of Industrial Chemistry from Olabisi Onabanjo University. I'm an aspiring **Data Engineer and Analyst** passionate about building reliable data pipelines, efficient data models, and generating data-driven business decisions. 
 
 <img src="https://cdn-icons-png.flaticon.com/128/724/724664.png" width="18" alt="Phone"/> **07060784176** 
 <img src="https://cdn-icons-png.flaticon.com/128/732/732200.png" width="18" alt="E-mail"/> **toyibotusanya@gmail.com**
