@@ -1,44 +1,67 @@
-/* 
-=======================================================================================================================================
+/*
+========================================================================================================
 Create Database and Schemas
-=======================================================================================================================================
-SCRIPT PURPOSE: 
-	This script drops existing database named 'Datewarehouse', and recreates a new database with the same name.
-	If it exists, it is dropped and a new one is recreated, otherwise, the scipt between 'BEGIN' and 'END' in the 'IF' Statement
-	is skipped, and the 'data warehouse 'database is created. Addititionally, the script sets up three schemas within the database: 
-	'Bronze', 'Silver', and 'Gold'
+========================================================================================================
+Script Purpose:
+	This script creates a new database named "Datawarehouse". It checks the existence of this database,
+	deletes it if it exists, and then recreates a new one. Additionally, it also creates three schemas:
+	bronze, gold, and layer. 
+	To drop existing schemas in the database and recreate new ones with the same name,
+	this script also checks for the existence of existing & non-existing schemas, deletes them if
+	they exist, and recreates them.
 
-WARNING:
-  Running this script will drop the entire 'datawarehouse' database if it exists.
-  All data in the database will be permanently deleted. Proceed with caution, and
-  ensure to have proper backups before running this script
-=======================================================================================================================================
+Warning:
+	Running this script deletes the existing database, "Datawarehouse", if it exists.
+ 	It will permanently delete all data in the database. Proceed with caution and
+	ensure to have proper backups before running.
+========================================================================================================
 */
-
-USE Master;
+-- -----------------------------------------------------------------------------------------------------
+-- Drop and Recreate the Database 'Datawarehouse'
+-- -----------------------------------------------------------------------------------------------------
+USE master;
 GO
-
--- Drop and Recreate the Database named 'Datawarehouse'
-IF EXISTS(SELECT 1 FROM sys.databases WHERE name = 'Datawarehouse')
+-- Drop Database 'Datawarehouse' if it exixts
+IF EXISTS (SELECT * FROM sys.databases WHERE name = 'Datawarehouse')
 BEGIN
-	ALTER DATABASE Datawarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-	DROP DATABASE Datawarehouse;
+	ALTER DATABASE Datawarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+	DROP DATABASE Datawarehouse
 END;
 GO
 
--- Create the 'Datawarehouse' Database
+-- Create Database 'Datawarehouse'
 CREATE DATABASE Datawarehouse;
-GO
 
+-- -----------------------------------------------------------------------------------------------------
+-- Drop and Recreate Schemas
+-- -----------------------------------------------------------------------------------------------------
 USE Datawarehouse;
 GO
 
--- Create Schemas
+-- Drop Schema 'bronze' if it exist
+IF EXISTS (SELECT * FROM sys.schemas WHERE name = 'bronze')
+BEGIN
+	DROP SCHEMA bronze
+END;
+GO
+-- Create Schema 'bronze'
 CREATE SCHEMA bronze;
 GO
-
+-- Drop Schema 'silver' if it exist
+IF EXISTS (SELECT * FROM sys.schemas WHERE name = 'silver')
+BEGIN
+	DROP SCHEMA silver
+END;
+GO
+-- Create Schema 'silver'
 CREATE SCHEMA silver;
 GO
-
+-- Drop Schema 'gold' if it exist
+IF EXISTS (SELECT * FROM sys.schemas WHERE name = 'gold')
+BEGIN
+	DROP SCHEMA gold
+END;
+GO
+-- Create Schema 'gold'
 CREATE SCHEMA gold;
 GO
