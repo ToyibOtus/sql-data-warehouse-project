@@ -1,6 +1,6 @@
 /*
 =======================================================================================================
-DDL Script: Creates bronze tables
+DDL Script: Create bronze tables
 =======================================================================================================
 Script Purpose:
 	This script checks the existence of the followning tables:
@@ -15,14 +15,14 @@ Script Purpose:
 	Run this script to redefine the structure of your 'bronze' tables
 =======================================================================================================
 */
-USE MyDatawarehouse;
+USE Datawarehouse;
 GO
 
--- Drops bronze table 'bronze.crm_cust_info' if it exists
+-- Drop bronze table 'bronze.crm_cust_info' if it exists
 IF OBJECT_ID('bronze.crm_cust_info', 'U') IS NOT NULL
 DROP TABLE bronze.crm_cust_info;
 GO
--- Creates bronze table 'bronze.crm_cust_info'
+-- Create bronze table 'bronze.crm_cust_info'
 CREATE TABLE bronze.crm_cust_info
 (
 	cst_id INT,
@@ -34,11 +34,11 @@ CREATE TABLE bronze.crm_cust_info
 	cst_create_date DATE
 );
 
--- Drops bronze table 'bronze.crm_prd_info' if it exists
+-- Drop bronze table 'bronze.crm_prd_info' if it exists
 IF OBJECT_ID('bronze.crm_prd_info', 'U') IS NOT NULL
 DROP TABLE bronze.crm_prd_info;
 GO
--- Creates bronze table 'bronze.crm_prd_info'
+-- Create bronze table 'bronze.crm_prd_info'
 CREATE TABLE bronze.crm_prd_info
 (
 	prd_id INT,
@@ -50,11 +50,11 @@ CREATE TABLE bronze.crm_prd_info
 	prd_end_dt DATE
 );
 
--- Drops bronze table 'bronze.crm_sales_details' if it exists
+-- Drop bronze table 'bronze.crm_sales_details' if it exists
 IF OBJECT_ID('bronze.crm_sales_details', 'U') IS NOT NULL
 DROP TABLE bronze.crm_sales_details;
 GO
--- Creates bronze table 'bronze.crm_sales_details'
+-- Create bronze table 'bronze.crm_sales_details'
 CREATE TABLE bronze.crm_sales_details
 (
 	sls_ord_num NVARCHAR(50),
@@ -68,11 +68,11 @@ CREATE TABLE bronze.crm_sales_details
 	sls_price INT
 );
 
--- Drops bronze table 'bronze.erp_cust_az12' if it exists
+-- Drop bronze table 'bronze.erp_cust_az12' if it exists
 IF OBJECT_ID('bronze.erp_cust_az12', 'U') IS NOT NULL
 DROP TABLE bronze.erp_cust_az12;
 GO
--- Creates bronze table 'bronze.erp_cust_az12'
+-- Create bronze table 'bronze.erp_cust_az12'
 CREATE TABLE bronze.erp_cust_az12
 (
 	cid NVARCHAR(50),
@@ -80,22 +80,22 @@ CREATE TABLE bronze.erp_cust_az12
 	gen NVARCHAR(50)
 );
 
--- Drops bronze table 'bronze.erp_loc_a101' if it exists
+-- Drop bronze table 'bronze.erp_loc_a101' if it exists
 IF OBJECT_ID('bronze.erp_loc_a101', 'U') IS NOT NULL
 DROP TABLE bronze.erp_loc_a101;
 GO
--- Creates bronze table 'bronze.erp_loc_a101'
+-- Create bronze table 'bronze.erp_loc_a101'
 CREATE TABLE bronze.erp_loc_a101
 (
 	cid NVARCHAR(50),
 	cntry NVARCHAR(50)
 );
 
--- Drops bronze table 'bronze.erp_px_cat_g1v2' if it exists
+-- Drop bronze table 'bronze.erp_px_cat_g1v2' if it exists
 IF OBJECT_ID('bronze.erp_px_cat_g1v2', 'U') IS NOT NULL
 DROP TABLE bronze.erp_px_cat_g1v2;
 GO
--- Creates bronze table 'bronze.erp_px_cat_g1v2'
+-- Create bronze table 'bronze.erp_px_cat_g1v2'
 CREATE TABLE bronze.erp_px_cat_g1v2
 (
 	id NVARCHAR(50),
