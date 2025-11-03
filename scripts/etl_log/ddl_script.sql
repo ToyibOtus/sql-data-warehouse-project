@@ -3,19 +3,13 @@
 DDL Script: Creates an ETL Log Table
 ================================================================================================
 Script Purpose: 
-	This script firstly checks the existence of the schema 'audit'. If it doesn't exist,
-	it is created, otherwise no execution is carried out. Secondly, it checks the existence
-	of the table 'audit.etl_log'. If it exists, it is dropped, otherwise no execution is
-	carried out. Lastly, the script creates the log table 'audit.etl_log'.
+	This script firstly checks the existence of the table 'audit.etl_log'. If it exists, 
+	it is dropped and recreated, otherwise there is no table to be dropped, and the 
+	log table 'audit.etl_log' is created directly.
 
 	Run this script to redefine the structure of your etl log table.
 ================================================================================================
 */
-
-IF NOT EXISTS(SELECT 1 FROM sys.schemas WHERE name = 'audit')
-BEGIN
-	EXEC('CREATE SCHEMA audit')
-END;
 
 IF OBJECT_ID('audit.etl_log', 'U') IS NOT NULL
 DROP TABLE audit.etl_log;
