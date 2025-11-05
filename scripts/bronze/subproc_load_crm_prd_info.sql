@@ -6,10 +6,8 @@ Script Purpose:
 	This scripts performs the following operations:
 	1. Truncates table 'bronze.crm_prd_info'.
 	2. Uses the bulk insert command to load data from the source system into the bronze table.
-	3. Records important ETL execution details into the log table 'audit.etl_log'.
-
-	Additionally, it also loads vital execution details into the etl log table 'audit.etl_log', ensuring
-	easy monitoring, traceability, and debugging.
+	3. Loads vital execution details into the etl log table 'audit.etl_log', ensuring
+	   easy monitoring, traceability, and debugging.
 
 Parameters:
 	@run_id UNIQUEIDENTIFIER
