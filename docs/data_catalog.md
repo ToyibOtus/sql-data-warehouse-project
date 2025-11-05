@@ -7,7 +7,7 @@ It consists of the following:
 * **dimension tables**, and
 * **fact tables**
 
-These tables contain key business metrics that supports analysis, and thus informed-decision making.
+These tables contain key business metrics that supports analysis, and thus enabling data-driven decisions.
 
 ---
 
@@ -22,11 +22,11 @@ These tables contain key business metrics that supports analysis, and thus infor
 |customer_number      |NVARCHAR(50)        |Alphanumerical identifier representing each customer, used for tracking and referencing.|
 |first_name           |NVARCHAR(50)        |The customer's first name recorded in the system.|
 |last_name            |NVARCHAR(50)        |The customer's last name recorded in the system.|
-|country              |NVARCHAR(50)        |The customer's country of residence (e.g., 'Australia'.|
-|marital_status       |NVARCHAR(50)        |The marital status of the customer (e.g., 'Married', 'Single', 'N/A'.|
-|gender               |NVARCHAR(50)        |The gender of the customer (e.g., 'Male', 'Female', 'N/A'.|
-|birth_date           |DATE                |The date of birth of the customer, formatted as YYYY-MM-DD (e.g., '1971-10-06'.|
-|create_date          |DATE                |The date the customer record was created in the system (e.g., '2025-10-06'.|
+|country              |NVARCHAR(50)        |The customer's country of residence (e.g., 'Australia').|
+|marital_status       |NVARCHAR(50)        |The marital status of the customer (e.g., 'Married', 'Single', 'N/A').|
+|gender               |NVARCHAR(50)        |The gender of the customer (e.g., 'Male', 'Female', 'N/A').|
+|birth_date           |DATE                |The date of birth of the customer, formatted as YYYY-MM-DD (e.g., '1971-10-06').|
+|create_date          |DATE                |The date the customer record was created in the system (e.g., '2025-10-06').|
 
 ---
 
@@ -41,11 +41,11 @@ These tables contain key business metrics that supports analysis, and thus infor
 |product_number      |NVARCHAR(50)         |Alphanumerical identifier representing each product, used for tracking and referencing.|
 |product_name        |NVARCHAR(50)         |Descriptive name of the product, including key details such as type, colour, and size.|
 |category_id         |NVARCHAR(50)         |A unique identifier for each product's category.|
-|category            |NVARCHAR(50)         |A broader classification of products (e.g., 'Bike', 'Components'.| 
-|subcategory         |NVARCHAR(50)         |A more detailed classification of products (e.g., 'Road Frames', 'Mountain Bikes'.|
-|maintenance         |NVARCHAR(50)         |Indicates whether the product requires maintenance or not (e.g., 'Yes', 'No'.|
+|category            |NVARCHAR(50)         |A broader classification of products (e.g., 'Bike', 'Components').| 
+|subcategory         |NVARCHAR(50)         |A more detailed classification of products (e.g., 'Road Frames', 'Mountain Bikes').|
+|maintenance         |NVARCHAR(50)         |Indicates whether the product requires maintenance or not (e.g., 'Yes', 'No').|
 |cost                |INT                  |The cost or base price of the product measured in monetary units.|
-|product_line        |NVARCHAR(50)         |The specific product line or series to which the product belongs (e.g., 'Road', 'Mountain'|
+|product_line        |NVARCHAR(50)         |The specific product line or series to which the product belongs (e.g., 'Road', 'Mountain').|
 |start_date          |DATE                 |The date the product became available for sale|
 
 ---
@@ -56,7 +56,7 @@ These tables contain key business metrics that supports analysis, and thus infor
 
 |   **Column Name**  |   **Data Type**     |   **Description**                                                                         |
 |--------------------|---------------------|-------------------------------------------------------------------------------------------|
-|order_number        |NVARCHAR(50)         |A unque alphanumerical identifier assigned to each sales order (e.g., 'SO54496'.|
+|order_number        |NVARCHAR(50)         |A unque alphanumerical identifier assigned to each sales order (e.g., 'SO54496').|
 |product_key         |INT                  |Surrogate key, linking **fact_sales** to **dim_products**.|
 |customer_key        |INT                  |Surrogate key, linking **fact_sales** to **dim_customers**.| 
 |order_date          |DATE                 |The date an order was placed.|
