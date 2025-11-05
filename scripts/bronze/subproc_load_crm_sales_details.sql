@@ -64,6 +64,7 @@ BEGIN
 		(
 			run_id, 
 			layer,
+			load_type,
 			process_name, 
 			load_status, 
 			start_time, 
@@ -77,6 +78,7 @@ BEGIN
 		(
 			@run_id,
 			'bronze',
+			'Full',
 			@process_name,
 			'Success',
 			@start_time,
@@ -96,6 +98,7 @@ BEGIN
 		(
 			run_id,
 			layer,
+			load_type,
 			process_name,
 			load_status,
 			start_time,
@@ -114,6 +117,7 @@ BEGIN
 		(
 			@run_id,
 			'bronze',
+			'Full',
 			@process_name,
 			'Failure',
 			@start_time,
