@@ -7,11 +7,12 @@ Script Purpose:
 	1. Truncates table 'bronze.crm_cust_info'.
 	2. Uses the bulk insert command to load data from the source system into the bronze table.
 	3. Records important ETL execution details into the log table 'audit.etl_log'.
+	
+	Additionally, it also loads vital execution details into the etl log table 'audit.etl_log', ensuring
+	easy monitoring, traceability, and debugging.
 
-Parameters:
+Parameter:
 	@run_id UNIQUEIDENTIFIER
-	This procedure requires you input the value 'NEWID()' into the parameter if it is being run manually, 
-	and it doesn't return any values.
 
 Usage:
 	EXEC bronze.load_crm_cust_info @run_id = NEWID();
@@ -36,17 +37,15 @@ BEGIN
 	@source_file NVARCHAR(50),
 	@file_path NVARCHAR(250);
 
-	-- ------------------------------------------------------------------
-	-- Checking For Error
-	-- ------------------------------------------------------------------
+	-- Map values to variables
 	BEGIN TRY
 		SET @process_name = 'Load bronze.crm_cust_info';
 		SET @start_time = GETDATE();
 
-		-- Truncate Table 'bronze.crm_cust_info'
+		-- Clear target table before load
 		TRUNCATE TABLE bronze.crm_cust_info;
 		
-		-- Bulk Insert 'Table bronze.crm_cust_info'
+		-- Load Data
 		BULK INSERT bronze.crm_cust_info
 		FROM 'C:\Users\PC\Documents\SQL_DataWareHouseProject\sql-data-warehouse-project\datasets\source_crm\cust_info.csv'
 		WITH
@@ -55,12 +54,13 @@ BEGIN
 			FIELDTERMINATOR = ',',
 			TABLOCK
 		);
+		-- Map values to variables
 		SET @end_time = GETDATE();
 		SET @source_file = 'crm_cust_info';
 		SET @file_path = 'C:\Users\PC\Documents\SQL_DataWareHouseProject\sql-data-warehouse-project\datasets\source_crm\cust_info.csv';
 		SELECT @rows_loaded = COUNT(*) FROM bronze.crm_cust_info;
 
-		-- Insert Into ETL Log Table 'audit.etl_log'
+		-- Log success
 		INSERT INTO audit.etl_log 
 		(
 			run_id, 
@@ -90,11 +90,9 @@ BEGIN
 			@file_path
 		);
 	END TRY
-	-- ------------------------------------------------------------------
-	-- Error Handling
-	-- ------------------------------------------------------------------
+	
 	BEGIN CATCH
-	-- Insert the following when an error occurs
+	-- Log any failure with error details
 		INSERT INTO audit.etl_log
 		(
 			run_id,
