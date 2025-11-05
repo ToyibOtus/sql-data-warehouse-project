@@ -37,8 +37,8 @@ BEGIN
 	@source_file NVARCHAR(50),
 	@file_path NVARCHAR(250);
 
-	-- Map values to variables
 	BEGIN TRY
+		-- Map values to variables
 		SET @process_name = 'Load bronze.crm_cust_info';
 		SET @start_time = GETDATE();
 
