@@ -61,27 +61,27 @@ BEGIN
 		-- Insert Into ETL Log Table 'audit.etl_log'
 		INSERT INTO audit.etl_log 
 		(
-		run_id, 
-		process_name, 
-		load_status, 
-		start_time, 
-		end_time, 
-		load_duration_seconds,
-		rows_loaded,
-		source_file,
-		file_path
-		)
+			run_id, 
+			process_name, 
+			load_status, 
+			start_time, 
+			end_time, 
+			load_duration_seconds,
+			rows_loaded,
+			source_file,
+			file_path
+			)
 		VALUES
 		(
-		@run_id,
-		@process_name,
-		'Success',
-		@start_time,
-		@end_time,
-		DATEDIFF(second, @start_time, @end_time),
-		@rows_loaded,
-		@source_file,
-		@file_path
+			@run_id,
+			@process_name,
+			'Success',
+			@start_time,
+			@end_time,
+			DATEDIFF(second, @start_time, @end_time),
+			@rows_loaded,
+			@source_file,
+			@file_path
 		);
 	END TRY
 	-- ------------------------------------------------------------------
@@ -91,37 +91,37 @@ BEGIN
 	-- Insert the following when an error occurs
 		INSERT INTO audit.etl_log
 		(
-		run_id,
-		process_name,
-		load_status,
-		start_time,
-		end_time,
-		load_duration_seconds,
-		source_file,
-		file_path,
-		error_number,
-		error_message,
-		error_line,
-		error_severity,
-		error_state,
-		error_procedure
+			run_id,
+			process_name,
+			load_status,
+			start_time,
+			end_time,
+			load_duration_seconds,
+			source_file,
+			file_path,
+			error_number,
+			error_message,
+			error_line,
+			error_severity,
+			error_state,
+			error_procedure
 		)
 		VALUES
 		(
-		@run_id,
-		@process_name,
-		'Failure',
-		@start_time,
-		@end_time,
-		DATEDIFF(second, @start_time, @end_time),
-		@source_file,
-		@file_path,
-		ERROR_NUMBER(),
-		ERROR_MESSAGE(),
-		ERROR_LINE(),
-		ERROR_SEVERITY(),
-		ERROR_STATE(),
-		ERROR_PROCEDURE()
+			@run_id,
+			@process_name,
+			'Failure',
+			@start_time,
+			@end_time,
+			DATEDIFF(second, @start_time, @end_time),
+			@source_file,
+			@file_path,
+			ERROR_NUMBER(),
+			ERROR_MESSAGE(),
+			ERROR_LINE(),
+			ERROR_SEVERITY(),
+			ERROR_STATE(),
+			ERROR_PROCEDURE()
 		);
 	END CATCH
 END;
