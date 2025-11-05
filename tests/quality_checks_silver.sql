@@ -135,7 +135,7 @@ WHERE sls_order_dt > sls_ship_dt
 OR sls_order_dt > sls_due_dt;
 
 -- Checking For Invalid Values(Negatives, Zeros, or Nulls) In Sales, Quantity, and Price
--- Checking For Consistency Among Sales, Quantity, and Price 
+-- Checking For Consistency Between Sales, Quantity, and Price 
 -- Expectation: No Result
 
 SELECT
