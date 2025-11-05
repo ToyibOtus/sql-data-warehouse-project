@@ -27,6 +27,8 @@ CREATE TABLE audit.etl_log
 	rows_loaded INT,
 	source_file NVARCHAR(50) NOT NULL,
 	file_path NVARCHAR(250),
+	source_table NVARCHAR(50),
+	target_table NVARCHAR(50),
 	error_number INT,
 	error_message NVARCHAR(MAX),
 	error_line INT,
