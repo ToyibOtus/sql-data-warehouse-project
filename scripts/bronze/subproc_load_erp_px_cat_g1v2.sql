@@ -59,10 +59,11 @@ BEGIN
 		SELECT @rows_loaded = COUNT(*) FROM bronze.erp_px_cat_g1v2;
 
 		-- Insert Into ETL Log Table 'audit.etl_log'
-		INSERT INTO audit.etl_log 
+			INSERT INTO audit.etl_log 
 		(
 			run_id, 
 			layer,
+			load_type,
 			process_name, 
 			load_status, 
 			start_time, 
@@ -71,11 +72,12 @@ BEGIN
 			rows_loaded,
 			source_file,
 			file_path
-			)
+		)
 		VALUES
 		(
 			@run_id,
 			'bronze',
+			'Full',
 			@process_name,
 			'Success',
 			@start_time,
@@ -95,6 +97,7 @@ BEGIN
 		(
 			run_id,
 			layer,
+			load_type,
 			process_name,
 			load_status,
 			start_time,
@@ -113,6 +116,7 @@ BEGIN
 		(
 			@run_id,
 			'bronze',
+			'Full',
 			@process_name,
 			'Failure',
 			@start_time,
