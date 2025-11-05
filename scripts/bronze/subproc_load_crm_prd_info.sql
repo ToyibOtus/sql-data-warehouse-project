@@ -62,6 +62,7 @@ BEGIN
 		INSERT INTO audit.etl_log 
 		(
 			run_id, 
+			layer,
 			process_name, 
 			load_status, 
 			start_time, 
@@ -74,6 +75,7 @@ BEGIN
 		VALUES
 		(
 			@run_id,
+			'bronze',
 			@process_name,
 			'Success',
 			@start_time,
@@ -92,6 +94,7 @@ BEGIN
 		INSERT INTO audit.etl_log
 		(
 			run_id,
+			layer,
 			process_name,
 			load_status,
 			start_time,
@@ -109,6 +112,7 @@ BEGIN
 		VALUES
 		(
 			@run_id,
+			'bronze',
 			@process_name,
 			'Failure',
 			@start_time,
