@@ -127,6 +127,8 @@ BEGIN
 	END TRY
 
 	BEGIN CATCH
+		SET @end_time = GETDATE()
+		
 		-- Log any failure with error details
 		INSERT INTO audit.etl_log
 		(
