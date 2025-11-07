@@ -24,6 +24,37 @@ This repository is an excellent resource for professionals, and students looking
 
 ---
 
+## SQL Scripts Overview
+This directory contains all SQL scripts used for creating, extracting, transforming, loading, and auditing data across different layers in the data warehouse. Each subfolder represents a schema in the data warehouse.
+
+### 1. bronze (Raw Data Ingestion)
+Holds raw data as-is in the source system. Typical scripts include:
+* **DDL Script**: Creates tables in the bronze layer.
+* **Stored Procedure**: A stored procedure is created for each of the bronze table, extracting data from the source system and loading the bronze using the **BULK INSERT** command.
+
+### 2. silver (Data Cleansing & Transformations)
+Holds cleaned and prepared data. Typical scripts include:
+* **DDL Script**: Creates tables in the silver layer.
+* **Stored Procedure**: A stored procedure is created for each of the silver table, extracting, transforming, & loading using the **SELECT** and **INSERT** statements.
+
+### 3. gold (Analytics & Data Marts)
+Holds business-ready data. Contains **DDL Scripts** that performs the following operations:
+* creates vital business objects,
+* categorize them into either **dimension** or **fact**, and
+* build a newly integrated data model.
+
+### 4. audit (Logging & Monitoring)
+Holds vital executions details of the etl process, enabling easy monitoring, traceability, and debugging. Typical scripts include:
+* **audit.etl_log**: Creates the etl log table. 
+* **audit.etl_master_log**: Creates the etl master log table.
+
+### 5. etl (Orchestration & Procedures)
+Holds stored procedures of the bronze and silver layer, performing a full etl run when executed. Typical scripts include:
+* **etl_run_master_pipeline**: Performs the full etl run.
+* **etl_pipeline_control**: monitors the execution order or sequence of the stored procedures in the master procedure.
+
+---
+
 ## Project Requirements
 
 ### Build a Data Warehouse (Data Engineering)
@@ -42,7 +73,7 @@ Create a mordern **data warehouse using SQL server** to consolidate sales data, 
 
 ---
 
-## 01: Analytics and Reporting (Data Analytics)
+## 01. Analytics and Reporting (Data Analytics)
 
 ### Objectives
 
