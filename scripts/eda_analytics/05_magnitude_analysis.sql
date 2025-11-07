@@ -96,7 +96,7 @@ FROM gold.dim_products
 GROUP BY product_line 
 ORDER BY total_products DESC;
 
--- What category of product line has the highest number of products?
+-- Which category in each product line has the highest number of products?
 SELECT
 product_line,
 category,
@@ -119,7 +119,7 @@ ON s.product_key = p.product_key
 GROUP BY p.product_line
 ORDER BY product_line, total_sales DESC;
 
--- Which category of product line generates the highest revenue, and is it driven by price, or demand, or both?
+-- Which category in each product line generates the highest revenue, and is it driven by price, or demand, or both?
 SELECT
 p.product_line,
 p.category,
