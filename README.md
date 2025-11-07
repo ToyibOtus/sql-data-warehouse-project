@@ -62,7 +62,7 @@ The data architecture follows the Medalion Architecture **Bronze**, **Silver**, 
 ![data_architecture.png](docs/data_architecture.png)
 
 1. **Bronze Layer**: Stores raw data as-is from the source system, enabling traceability and debugging.
-2. **Silver Layer**: Sstores cleaned, prepared, and transformed data. It is designed to support analysis.
+2. **Silver Layer**: Stores cleaned, prepared, and transformed data. It is designed to support analysis.
 3. **Gold Layer**: Houses buesiness-ready data modeled into a star schema, supporting reporting and analytics.
 
 ---
