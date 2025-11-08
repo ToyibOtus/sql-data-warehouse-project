@@ -21,6 +21,10 @@ Purpose:
 		* average monthly revenue (sale per month).
 =================================================================================================================
 */
+IF OBJECT_ID('gold.report_products', 'V') IS NOT NULL
+DROP VIEW 'gold.report_products';
+GO
+
 CREATE VIEW gold.report_products AS
 WITH base_query AS
 /*-------------------------------------------------------------------------------------------
