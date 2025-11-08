@@ -4,8 +4,8 @@ Stored Procedure: Full ETL Run (Source -> Bronze -> Silver)
 ======================================================================================================================
 Script Purpose:
 	This script performs a full etl run, extracting, transforming, and loading the bronze and silver layers
-	where necessary. Additionally, it loads high-level execution details into the log table'audit.etl_master_log', 
-	ensuring adequate monitoring, and traceability on a high-level.
+	where necessary. Additionally, it loads high-level execution details into the log table 'audit.etl_master_log', 
+	ensuring adequate monitoring, and traceability at a high-level.
 
 Parameter: None
 
