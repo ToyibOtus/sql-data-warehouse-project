@@ -78,8 +78,8 @@ These tables contain key business metrics that supports analysis, and thus enabl
 |customer_number     |NVARCHAR(50)         |An alphanumerical unique identifier representing each customer, used for tracking and referencing.
 |customer_name       |NVARCHAR(101)        |The customer's fullname recorded in the system.
 |country             |NVARCHAR(50)         |The customer's country (e.g. 'Australia').
-|gender              |NVARCHAR(50)         |The customer's gender (e.g. 'Male', 'Female').
-|marital_status      |NVARCHAR(50)         |The customer's marital status (e.g. 'Single', 'Married').
+|gender              |NVARCHAR(50)         |The customer's gender (e.g. 'Male', 'Female', 'N/A').
+|marital_status      |NVARCHAR(50)         |The customer's marital status (e.g. 'Single', 'Married', 'N/A').
 |birth_date          |DATE                 |The birth date of each customer (e.g. '1971-10-06').
 |age                 |INT                  |The customer's age (e.g. '54').
 |age_group           |VARCHAR(8)           |The customer's age group (e.g. 'Below 20', '20-29', '30-39').
