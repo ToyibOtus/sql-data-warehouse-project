@@ -30,7 +30,7 @@ These tables contain key business metrics that supports analysis, and thus enabl
 
 ---
 
-#### 2. gold_dim_products
+### 2. gold_dim_products
 * **Purpose:** Provides detailed information about the products and their attributes
 * **Columns:**
 
@@ -50,7 +50,7 @@ These tables contain key business metrics that supports analysis, and thus enabl
 
 ---
 
-##### 3. gold.fact_sales
+### 3. gold.fact_sales
 * **Purpose:** Stores transactional sales data for analytical purposes
 * **Columns:**
 
@@ -65,3 +65,41 @@ These tables contain key business metrics that supports analysis, and thus enabl
 |sales_amount        |INT                  |The total monetary value of the sale for the line item, in whole currency units (e.g., 25).|
 |quantity            |INT                  |The number of units of the product ordered for the line item (e.g., 1).|
 |price               |INT                  |The price per unit of the product for the line item, in whole currency units (e.g., 25).|
+
+---
+
+### 4. gold.report_customers
+* **Purpose:** Holds data prepared for visualization (BI tools)
+* **Columns:**
+
+|   **Column Name**  |   **Data Type**     |   **Description**                                                                         |
+|--------------------|---------------------|-------------------------------------------------------------------------------------------|
+|customer_key        |INT                  |A surrogate key unquely identifying each customer record in the dimension table.
+|customer_number     |NVARCHAR(50)         |An alphanumerical unique identifier representing each customer, used for tracking and referencing.
+|customer_name       |NVARCHAR(101)        |The customer's fullname (e.g. 'Jon Yang').
+|country             |NVARCHAR(50)         |The customer's country (e.g. 'Australia').
+|gender              |NVARCHAR(50)         |The customer's gender (e.g. 'Male', 'Female').
+|marital_status      |NVARCHAR(50)         |The customer's marital status (e.g. 'Single', 'Married').
+|birth_date          |DATE                 |The birth date of each customer (e.g. '1971-10-06').
+|age                 |INT                  |The customer's age (e.g. '54').
+|age_group           |VARCHAR(8)           |The customer's age group (e.g. 'Below 20', '20-29', '30-39').
+|first_order_date    |DATE                 |The customer's first order date (e.g. '2011-01-19').
+|last_order_date     |DATE                 |The customer's last order date (e.g. '2013-05-03').
+|recency_month       |INT                  |The number of months since last order (e.g. '150').
+|customer_status     |VARCHAR(7)           |The status of each customer, representing both value and loyalty (e.g. 'VIP', 'Regular', & 'New'). 
+|total_orders        |INT                  |The total number of orders made by each customer.
+|total_quantity      |INT                  |The total quantity of products purchased by each customer.
+|total_products      |INT                  |The unique number of products purchased by each customer.
+|total_sales         |INT                  |The total amount of revenue each customer has generated.
+|lifespan_month      |INT                  |The months of history each customer has with the organization.
+|avg_order_value     |INT                  |The value of one order made by a customer (total_sales/total_orders).
+|avg_monthly_spend   |INT                  |The average monthly spend (total_sales/lifespan_month).
+
+### 5. gold.report_products
+* **Purpose:** Holds data prepared for visualization (BI tools)
+* **Columns:**
+
+|   **Column Name**  |   **Data Type**     |   **Description**                                                                         |
+|--------------------|---------------------|-------------------------------------------------------------------------------------------|
+
+
