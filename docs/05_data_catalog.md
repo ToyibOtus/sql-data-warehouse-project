@@ -76,7 +76,7 @@ These tables contain key business metrics that supports analysis, and thus enabl
 |--------------------|---------------------|-------------------------------------------------------------------------------------------|
 |customer_key        |INT                  |A surrogate key unquely identifying each customer record in the report.
 |customer_number     |NVARCHAR(50)         |An alphanumerical unique identifier representing each customer, used for tracking and referencing.
-|customer_name       |NVARCHAR(101)        |The customer's fullname (e.g. 'Jon Yang').
+|customer_name       |NVARCHAR(101)        |The customer's fullname recorded in the system.
 |country             |NVARCHAR(50)         |The customer's country (e.g. 'Australia').
 |gender              |NVARCHAR(50)         |The customer's gender (e.g. 'Male', 'Female').
 |marital_status      |NVARCHAR(50)         |The customer's marital status (e.g. 'Single', 'Married').
@@ -103,8 +103,8 @@ These tables contain key business metrics that supports analysis, and thus enabl
 |--------------------|---------------------|-------------------------------------------------------------------------------------------|
 |product_key         |INT                  |A surrogate key uniquely identifying each record in the report.
 |product_number      |NVARCHAR(50)         |An alphanumerical unique identifier assigned to each product, used for tracking and referencing
-|product_name        |NVARCHAR(50)         |The product name (e.g. 'Road-150 Red- 62'). 
-|product_line        |NVARCHAR(50)         |The product line (e.g. 'Mountain', 'Road', 'Other Sales', and 'Touring').
+|product_name        |NVARCHAR(50)         |The product name recorded in the system (e.g. 'Road-150 Red- 62'). 
+|product_line        |NVARCHAR(50)         |The product line each product falls into (e.g. 'Mountain', 'Road', 'Other Sales', and 'Touring').
 |category_id         |NVARCHAR(50)         |A unique identifier for each product's category.
 |category            |NVARCHAR(50)         |A broader classification of products (e.g., 'Bike', 'Components').
 |subcategory         |NVARCHAR(50)         |A more detailed classification of products (e.g., 'Road Frames', 'Mountain Bikes').
