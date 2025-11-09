@@ -44,6 +44,16 @@ Create a mordern **data warehouse using SQL server** to consolidate sales data, 
 
 ---
 
+## Tools & Technologies Used
+This project was built using the following tools:
+* **Notion**: For Project Planning.
+* **SQL Server**: Database platform for data storage.
+* **SQL Server Management Studio (SSMS)**: For database management and query execution.
+* **Draw.io**: For designing the data architecture, data flow, data integration model, and data model.
+* **Github**: For project documentation, and committing codes.
+
+---
+
 ## 01. Analytics and Reporting (Data Analytics)
 
 ### Objectives
