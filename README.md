@@ -10,9 +10,10 @@ This project involves:
 
 1. **Data Architecture**: Designing a modern data warehouse using Medalion Architecture **Bronze**, **Silver**, and **Gold** layers.
 2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the data warehouse.
-3. **ETL Logging**: Creating log tables that track and monitor the full etl process, enabling easy tracebability and debugging.
-4. **Data Modeling**: Develping fact and dimension tables optimized for analytical queries.
-5. **Analytics & Reporting**: Creating SQL-based reports to support data-driven decisions.
+3. **ETL Logging & Auditing**: Creating log tables that track and monitor the full etl process, enabling easy tracebability and debugging.
+4. **ETL Pipeline Control**: Creating a control table that monitors the execution order of the full etl run.
+5. **Data Modeling**: Develping fact and dimension tables optimized for analytical queries.
+6. **Analytics & Reporting**: Creating SQL-based reports to support data-driven decisions.
 
 This repository is an excellent resource for professionals, and students looking to showcase expertise in:
 
